@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="haveBackText"
+            type="androidx.databinding.ObservableField&lt;Boolean&gt;" />
+
+        <variable
+            name="haveBackImage"
+            type="androidx.databinding.ObservableField&lt;Boolean&gt;" />
+
+        <variable
+            name="haveTitle"
+            type="androidx.databinding.ObservableField&lt;Boolean&gt;" />
+
+        <variable
+            name="haveSubTitle"
+            type="androidx.databinding.ObservableField&lt;Boolean&gt;" />
+
+        <variable
+            name="haveMenuImage"
+            type="androidx.databinding.ObservableField&lt;Boolean&gt;" />
+
+        <variable
+            name="haveMenuText"
+            type="androidx.databinding.ObservableField&lt;Boolean&gt;" />
+
+        <variable
+            name="backText"
+            type="androidx.databinding.ObservableField&lt;String&gt;" />
+
+        <variable
+            name="titleText"
+            type="androidx.databinding.ObservableField&lt;String&gt;" />
+
+        <variable
+            name="subTitleText"
+            type="androidx.databinding.ObservableField&lt;String&gt;" />
+
+        <variable
+            name="menuText"
+            type="androidx.databinding.ObservableField&lt;String&gt;" />
+
+        <variable
+            name="titleLayout"
+            type="com.starlight.dot.framework.widget.TitleLayout" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_sl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="@{haveBackImage}"
+            android:onClick="@{titleLayout.onViewClick}"/>
+
+        <TextView
+            android:id="@+id/tv_sl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_sl_back"
+            android:layout_marginLeft="5dp"
+            android:visibility="@{haveBackText}"
+            android:text="@{backText}"
+            android:onClick="@{titleLayout.onViewClick}"/>
+
+
+        <LinearLayout
+            android:id="@+id/ll_sl_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_sl_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{titleText}"
+                android:visibility="@{haveTitle}"
+                android:onClick="@{titleLayout.onViewClick}"/>
+
+            <TextView
+                android:id="@+id/tv_sl_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{subTitleText}"
+                android:visibility="@{haveSubTitle}"
+                android:onClick="@{titleLayout.onViewClick}"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_sl_menuimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="@{haveMenuImage}"
+            android:onClick="@{titleLayout.onViewClick}"/>
+
+        <TextView
+            android:id="@+id/tv_sl_menutext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{menuText}"
+            android:visibility="@{haveMenuText}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_sl_menuimage"
+            android:onClick="@{titleLayout.onViewClick}"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

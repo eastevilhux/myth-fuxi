@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="lyn_have_title" format="boolean"/>
+    <attr name="lyn_have_subtitle" format="boolean"/>
+    <attr name="lyn_title_size" format="dimension"/>
+    <attr name="lyn_title_color" format="color"/>
+    <attr name="lyn_title_text" format="string"/>
+    <attr name="lyn_title_textStyle" format="enum">
+        <enum name="bold" value="1"/>
+        <enum name="italic" value="2"/>
+        <enum name="normal" value="3"/>
+    </attr>
+    <attr name="lyn_subTitle_size" format="dimension"/>
+    <attr name="lyn_subTitle_color" format="color"/>
+    <attr name="lyn_subTitle_text" format="string"/>
+    <attr name="lyn_subTitle_textStyle" format="enum">
+        <enum name="bold" value="1"/>
+        <enum name="italic" value="2"/>
+        <enum name="normal" value="3"/>
+    </attr>
+    <attr name="lyn_have_menu" format="boolean"/>
+    <attr name="lyn_menu_type" format="enum">
+        <enum name="none" value="0"/>
+        <enum name="image" value="1"/>
+        <enum name="text" value="2"/>
+        <enum name="all" value="3"/>
+    </attr>
+    <attr name="lyn_menu_width" format="dimension"/>
+    <attr name="lyn_menu_height" format="dimension"/>
+    <attr name="lyn_menu_src" format="reference"/>
+    <attr name="lyn_menu_text" format="string"/>
+    <attr name="lyn_menu_textSize" format="dimension"/>
+    <attr name="lyn_menu_textColor" format="color"/>
+    <attr name="lyn_menu_menuTextStyle" format="enum">
+        <enum name="bold" value="1"/>
+        <enum name="italic" value="2"/>
+        <enum name="normal" value="3"/>
+    </attr>
+    <attr name="lyn_item_iconFlag" format="boolean"/>
+    <attr name="lyn_item_iconSrc" format="reference"/>
+    <attr name="lyn_item_text" format="string"/>
+    <attr name="lyn_content_text" format="string"/>
+    <attr name="lyn_item_textSize" format="dimension"/>
+    <attr name="lyn_item_textColor" format="color"/>
+    <attr name="lyn_item_textStyle" format="enum">
+        <enum name="bold" value="1"/>
+        <enum name="italic" value="2"/>
+        <enum name="normal" value="3"/>
+    </attr>
+    <attr name="lyn_item_arrowFlag" format="boolean"/>
+    <attr name="lyn_item_arrowSrc" format="reference"/>
+    <attr name="lyn_item_background" format="reference"/>
+    <attr name="lyn_content_iconFlag" format="boolean"/>
+    <attr name="lyn_content_iconSrc" format="reference"/>
+    <attr name="lyn_content_textSize" format="dimension"/>
+    <attr name="lyn_content_textColor" format="color"/>
+    <attr name="lyn_content_textStyle" format="enum">
+        <enum name="bold" value="1"/>
+        <enum name="italic" value="2"/>
+        <enum name="normal" value="3"/>
+    </attr>
+    <attr name="lyn_content_arrowFlag" format="boolean"/>
+    <attr name="lyn_content_arrowScr" format="reference"/>
+    <attr name="lyn_content_endIconFlag" format="boolean"/>
+    <attr name="lyn_content_endIconSrc" format="reference"/>
+    <attr name="lyn_content_background" format="reference"/>
+    <declare-styleable name="TitleLayout">
+        <attr name="lyn_back_src" format="reference"/>
+        <attr name="lyn_back_imageWidth" format="dimension"/>
+        <attr name="lyn_back_imageHeight" format="dimension"/>
+        <attr name="lyn_back_type" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="image" value="1"/>
+            <enum name="text" value="2"/>
+            <enum name="all" value="3"/>
+        </attr>
+        <attr name="lyn_back_textStyle" format="enum">
+            <enum name="bold" value="1"/>
+            <enum name="italic" value="2"/>
+            <enum name="normal" value="3"/>
+        </attr>
+        <attr name="lyn_back_image_paddingLeft" format="dimension"/>
+        <attr name="lyn_back_image_paddingRight" format="dimension"/>
+        <attr name="lyn_back_image_paddingTop" format="dimension"/>
+        <attr name="lyn_back_image_paddingBottom" format="dimension"/>
+        <attr name="lyn_back_image_padding" format="dimension"/>
+        <attr name="lyn_back_textSize" format="reference"/>
+        <attr name="lyn_back_textColor" format="color"/>
+        <attr name="lyn_back_text" format="string"/>
+        <attr name="lyn_have_title" />
+        <attr name="lyn_have_subtitle"/>
+        <attr name="lyn_title_size"/>
+        <attr name="lyn_title_color"/>
+        <attr name="lyn_title_text"/>
+        <attr name="lyn_title_textStyle"/>
+        <attr name="lyn_subTitle_size"/>
+        <attr name="lyn_subTitle_color"/>
+        <attr name="lyn_subTitle_text"/>
+        <attr name="lyn_subTitle_textStyle"/>
+        <attr name="lyn_menu_type"/>
+        <attr name="lyn_menu_imageWidth" format="dimension"/>
+        <attr name="lyn_menu_imageHeight" format="dimension"/>
+        <attr name="lyn_menu_src"/>
+        <attr name="lyn_backImage_marginLeft" format="dimension"/>
+        <attr name="lyn_bankText_marginLeft" format="dimension"/>
+        <attr name="lyn_menuImage_marginRight" format="dimension"/>
+        <attr name="lyn_menuText_marginRight" format="dimension"/>
+        <attr name="lyn_menu_text"/>
+        <attr name="lyn_menu_textSize"/>
+        <attr name="lyn_menu_textColor"/>
+        <attr name="lyn_menu_menuTextStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="SlsetLayout">
+        <attr name="lyn_item_iconFlag"/>
+        <attr name="lyn_item_iconSrc"/>
+        <attr name="lyn_item_text"/>
+        <attr name="lyn_item_textSize"/>
+        <attr name="lyn_item_textColor"/>
+        <attr name="lyn_item_textStyle"/>
+        <attr name="lyn_item_arrowFlag"/>
+        <attr name="lyn_item_arrowSrc"/>
+        <attr name="lyn_item_background"/>
+        <attr name="lyn_content_iconFlag"/>
+        <attr name="lyn_content_iconSrc" />
+        <attr name="lyn_content_text"/>
+        <attr name="lyn_content_textSize" />
+        <attr name="lyn_content_textColor"/>
+        <attr name="lyn_content_textStyle"/>
+        <attr name="lyn_content_arrowFlag"/>
+        <attr name="lyn_content_arrowScr" />
+        <attr name="lyn_content_endIconFlag"/>
+        <attr name="lyn_content_endIconSrc" />
+        <attr name="lyn_content_background"/>
+        <attr name="lyn_item_weight" format="integer"/>
+        <attr name="lyn_content_weight" format="integer"/>
+        <attr name="lyn_item_iconWidth" format="dimension"/>
+        <attr name="lyn_item_iconHeight" format="dimension"/>
+        <attr name="lyn_item_arrowWidth" format="dimension"/>
+        <attr name="lyn_item_arrowHeight" format="dimension"/>
+        <attr name="lyn_content_iconWidth" format="dimension"/>
+        <attr name="lyn_content_iconHeight" format="dimension"/>
+        <attr name="lyn_content_endIconWidth" format="dimension"/>
+        <attr name="lyn_content_endIconHeight" format="dimension"/>
+        <attr name="lyn_content_arrowWidth" format="dimension"/>
+        <attr name="lyn_content_arrowHeight" format="dimension"/>
+    </declare-styleable>
+</resources>

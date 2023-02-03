@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LYNDialogStyle" parent="@android:style/Theme.Dialog">
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 背景模糊 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 允许对话框的背景变暗 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="AppTextTheme">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/colorAppText</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppTextTheme.Normal">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+
+    <style name="SLTitleTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="lyn_back_src">@drawable/icon_sl_back</item>
+        <item name="lyn_back_imageWidth">30dp</item>
+        <item name="lyn_back_imageHeight">30dp</item>
+        <item name="lyn_back_image_padding">7dp</item>
+        <item name="lyn_backImage_marginLeft">10dp</item>
+        <item name="lyn_menuImage_marginRight">15dp</item>
+        <item name="lyn_menuText_marginRight">15dp</item>
+        <item name="lyn_title_size">8sp</item>
+        <item name="android:paddingTop">28dp</item>
+        <item name="lyn_title_color">@color/slColorTitle</item>
+        <item name="android:background">@color/slColorMainTheme</item>
+    </style>
+
+    <style name="AppDialog" parent="@android:style/Theme.Dialog">
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 遮罩层 -->
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+
+</resources>

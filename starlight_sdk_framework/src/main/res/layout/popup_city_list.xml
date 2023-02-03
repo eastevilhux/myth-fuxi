@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.starlight.dot.framework.entity.SLCity"/>
+        <variable
+            name="selectProvince"
+            type="androidx.databinding.ObservableField&lt;Boolean&gt;" />
+
+        <variable
+            name="selectCity"
+            type="androidx.databinding.ObservableField&lt;Boolean&gt;" />
+
+        <variable
+            name="selectArea"
+            type="androidx.databinding.ObservableField&lt;Boolean&gt;" />
+
+        <variable
+            name="province"
+            type="androidx.databinding.ObservableField&lt;SLCity&gt;" />
+        <variable
+            name="city"
+            type="androidx.databinding.ObservableField&lt;SLCity&gt;" />
+        <variable
+            name="area"
+            type="androidx.databinding.ObservableField&lt;SLCity&gt;" />
+
+        <variable
+            name="hotAdapter"
+            type="com.starlight.dot.framework.adapter.HotCityAdapter" />
+
+        <variable
+            name="cityAdapter"
+            type="com.starlight.dot.framework.adapter.CityAdapter" />
+
+        <variable
+            name="showEnter"
+            type="androidx.databinding.ObservableField&lt;Boolean&gt;" />
+
+        <variable
+            name="popup"
+            type="com.starlight.dot.framework.widget.popup.CityPopup" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sl_shape_top_fill_white_12">
+
+        <TextView
+            android:id="@id/tv_sl_popup_title"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/AppTextTheme.Normal"
+            android:text="@string/sl_popup_title_selectcity"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/tv_select_enter"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toTopOf="@id/tv_sl_popup_title"
+            app:layout_constraintBottom_toBottomOf="@id/tv_sl_popup_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="15dp"
+            style="@style/AppTextTheme.Normal"
+            android:gravity="right|center_vertical"
+            android:text="@string/sl_lib_enter"
+            android:visibility="@{showEnter}"
+            android:onClick="@{popup.onViewClick}"/>
+
+
+        <TextView
+            android:id="@+id/tv_sl_popup_province"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toStartOf="@id/iv_province_arrow"
+            app:layout_constraintTop_toBottomOf="@id/tv_sl_popup_title"
+            app:layout_constraintStart_toEndOf="@id/iv_popup_city_province_point"
+            android:text="@{province.cityName}"
+            android:layout_marginLeft="8dp"
+            style="@style/AppTextTheme.Normal"
+            android:layout_marginTop="8dp"
+            android:gravity="left|center_vertical"
+            android:visibility="@{selectProvince}"
+            android:onClick="@{popup.onViewClick}"/>
+
+        <ImageView
+            android:id="@+id/iv_popup_city_province_point"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:layout_constraintTop_toTopOf="@id/tv_sl_popup_province"
+            app:layout_constraintBottom_toBottomOf="@id/tv_sl_popup_province"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="15dp"
+            android:visibility="@{selectProvince}"/>
+
+        <ImageView
+            android:id="@+id/iv_province_arrow"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/sl_vector_arrow_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_sl_popup_province"
+            app:layout_constraintBottom_toBottomOf="@id/tv_sl_popup_province"
+            android:layout_marginRight="15dp"
+            android:visibility="@{selectProvince}"/>
+
+
+        <TextView
+            android:id="@+id/tv_sl_popup_city"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_sl_popup_province"
+            app:layout_constraintStart_toEndOf="@id/iv_popup_city_city_point"
+            app:layout_constraintEnd_toStartOf="@id/iv_city_arrow"
+            android:layout_marginLeft="8dp"
+            style="@style/AppTextTheme.Normal"
+            android:text="@{city.cityName}"
+            android:gravity="left|center_vertical"
+            android:visibility="@{selectCity}"
+            android:onClick="@{popup.onViewClick}"/>
+
+        <ImageView
+            android:id="@+id/iv_city_line"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/iv_popup_city_province_point"
+            app:layout_constraintEnd_toEndOf="@id/iv_popup_city_province_point"
+            android:src="@drawable/sl_line_vertical_grey_width_1"
+            app:layout_constraintTop_toBottomOf="@id/iv_popup_city_province_point"
+            app:layout_constraintBottom_toTopOf="@id/iv_popup_city_city_point"
+            android:visibility="@{selectCity}"/>
+
+        <ImageView
+            android:id="@+id/iv_popup_city_city_point"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:layout_constraintTop_toTopOf="@id/tv_sl_popup_city"
+            app:layout_constraintBottom_toBottomOf="@id/tv_sl_popup_city"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="15dp"
+            android:visibility="@{selectCity}"/>
+
+        <ImageView
+            android:id="@+id/iv_city_arrow"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/sl_vector_arrow_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_sl_popup_city"
+            app:layout_constraintBottom_toBottomOf="@id/tv_sl_popup_city"
+            android:layout_marginRight="15dp"
+            android:visibility="@{selectCity}"/>
+
+        <TextView
+            android:id="@+id/tv_sl_popup_area"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_sl_popup_city"
+            app:layout_constraintStart_toEndOf="@id/iv_popup_city_area_point"
+            app:layout_constraintEnd_toStartOf="@id/iv_area_arrow"
+            android:layout_marginLeft="8dp"
+            style="@style/AppTextTheme.Normal"
+            android:text="@{area.cityName}"
+            android:gravity="left|center_vertical"
+            android:visibility="@{selectArea}"
+            android:onClick="@{popup.onViewClick}"/>
+
+        <ImageView
+            android:id="@+id/iv_popup_city_area_point"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:layout_constraintTop_toTopOf="@id/tv_sl_popup_area"
+            app:layout_constraintBottom_toBottomOf="@id/tv_sl_popup_area"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="15dp"
+            android:visibility="@{selectArea}"/>
+
+        <ImageView
+            android:id="@+id/iv_area_arrow"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/sl_vector_arrow_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_sl_popup_area"
+            app:layout_constraintBottom_toBottomOf="@id/tv_sl_popup_area"
+            android:layout_marginRight="15dp"
+            android:visibility="@{selectArea}"/>
+
+        <ImageView
+            android:id="@+id/iv_area_line"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/iv_popup_city_city_point"
+            app:layout_constraintEnd_toEndOf="@id/iv_popup_city_city_point"
+            android:src="@drawable/sl_line_vertical_grey_width_1"
+            app:layout_constraintTop_toBottomOf="@id/iv_popup_city_city_point"
+            app:layout_constraintBottom_toTopOf="@id/iv_popup_city_area_point"
+            android:visibility="@{selectArea}"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_sl_popup_area"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/AppTextTheme.Normal"
+                    android:text="@string/sl_hot_city"
+                    android:layout_marginLeft="15dp" />
+
+                <com.starlight.dot.framework.view.ExpandableGridView
+                    android:id="@+id/gird_hot_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:horizontalSpacing="5dp"
+                    android:verticalSpacing="7dp"
+                    android:numColumns="4"
+                    android:layout_marginTop="7dp"
+                    app:adapter="@{hotAdapter}"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:adapter="@{cityAdapter}"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

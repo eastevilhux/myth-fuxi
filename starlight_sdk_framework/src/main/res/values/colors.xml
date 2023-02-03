@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAppBg">#F4F4F4</color>
+    <color name="colorAppText">#101010</color>
+    <color name="colorAppLine">#F4F4F4</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="slColorLine">#C8C8C8</color>
+    <color name="slColorMainTheme">#FA960A</color>
+    <color name="slColorTitle">#0A0A0A</color>
+    <color name="slColorWhite">#FFFFFF</color>
+    <color name="slColorBlack">#000000</color>
+</resources>

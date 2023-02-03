@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tv_sl_dialog_submit" type="id"/>
+    <item name="tv_sl_dialog_close" type="id" />
+    <item name="tv_sl_dialog_cancel" type="id"/>
+    <item name="tv_sl_dialog_dismiss" type="id"/>
+    <item name="tv_sl_popup_title" type="id"/>
+    <item name="tv_sl_popup_submit" type="id"/>
+    <item name="tv_sl_popup_close" type="id"/>
+    <item name="tv_sl_popup_cancel" type="id"/>
+    <item name="tv_sl_popup_menu" type="id"/>
+</resources>

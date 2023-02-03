@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_default">system error</string>
+    <string name="lib_load_more">加载更多</string>
+    <string name="lib_loading">正在加载数据</string>
+    <string name="lib_nomore">暂无更多数据</string>
+    <string name="sl_hot_city">国内热门城市</string>
+    <string name="sl_popup_title_selectcity">请选择城市</string>
+    <string name="sl_lib_enter">确定</string>
+    <string name="sl_please_select_province">请选择省份</string>
+    <string name="sl_please_select_city">请选择城市</string>
+    <string name="sl_please_select_area">请选择区域</string>
+    <string name="sl_popup_title_provincelist">全国省份列表</string>
+
+    <string name="sl_date_format_with_week">yyyy年MM月dd日 E</string>
+    <string name="sl_date_year_month_format">yyyy年MM月</string>
+    <string name="sl_date_time_format_default">yyyy-MM-dd HH:mm:ss</string>
+    <string name="sl_date_time_format_chinse">yyyy年MM月dd日 HH时mm分ss秒</string>
+    <string name="sl_date_format_default">yyyy-MM-dd</string>
+    <string name="sl_time_format_default">HH:mm:ss</string>
+
+</resources>
